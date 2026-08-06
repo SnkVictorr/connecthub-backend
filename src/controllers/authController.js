@@ -9,7 +9,7 @@ const login = asyncHandler(async (req, res) => {
   res.cookie("refreshToken", tokens.refreshToken, {
     httpOnly: true,
     secure: process.env.SECURE === "production", // Defina como true se estiver usando HTTPS
-    sameSite: "lax", // Ajuste conforme necessário
+    sameSite: "none", // Ajuste conforme necessário
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 dias em milissegundos
   });
   res.json({
