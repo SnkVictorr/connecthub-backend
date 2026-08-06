@@ -28,7 +28,7 @@ app.use(helmet());
 const allowedOrigins = [
   "http://localhost:5500",
   process.env.FRONTEND_URL ||
-    "https://connecthub-frontend-production.up.railway.app",
+    "https://connecthub-eight-theta.vercel.app/cadastro.html",
 ];
 
 app.use(
