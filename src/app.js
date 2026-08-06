@@ -27,8 +27,7 @@ app.use(helmet());
 // Configuracões de Cors
 const allowedOrigins = [
   "http://localhost:5500",
-  process.env.FRONTEND_URL ||
-    "https://connecthub-eight-theta.vercel.app/cadastro.html",
+  process.env.FRONTEND_URL || "https://connecthub-eight-theta.vercel.app/",
 ];
 
 app.use(
