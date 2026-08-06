@@ -23,16 +23,16 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const apiLimiter = require("./middlewares/rateLimitMiddleware").apiLimiter;
 // Helmet é um middleware de segurança que ajuda a proteger a aplicação contra algumas vulnerabilidades da web, definindo cabeçalhos HTTP apropriados.
-app.use(helmet());
-// Configuracões de Cors
-const allowedOrigins = [
-  "http://localhost:5500",
-  process.env.FRONTEND_URL || "https://connecthub-eight-theta.vercel.app/",
-];
+// app.use(helmet());
+// // Configuracões de Cors
+// const allowedOrigins = [
+//   "http://localhost:5500",
+//   process.env.FRONTEND_URL || "https://connecthub-eight-theta.vercel.app/",
+// ];
 
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: "https://connecthub-eight-theta.vercel.app/",
     // Permite o envio de credenciais (cookies, autenticação, etc.). Só funciona origin definida
     credentials: true,
 
