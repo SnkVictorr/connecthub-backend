@@ -8,7 +8,7 @@ const login = asyncHandler(async (req, res) => {
   console.log("Tokens gerados:", tokens);
   res.cookie("refreshToken", tokens.refreshToken, {
     httpOnly: true,
-    secure: process.env.SECURE === "production", // Defina como true se estiver usando HTTPS
+    secure: true, // Defina como true se estiver usando HTTPS
     sameSite: "none", // Ajuste conforme necessário
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 dias em milissegundos
   });
@@ -34,7 +34,7 @@ const refreshToken = asyncHandler(async (req, res) => {
 
     {
       httpOnly: true,
-      secure: process.env.SECURE === "production", // Defina como true se estiver usando HTTPS
+      secure: true, // Defina como true se estiver usando HTTPS
       sameSite: "lax", // Ajuste conforme necessário
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 dias em milissegundos
     },
