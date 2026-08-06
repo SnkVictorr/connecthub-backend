@@ -11,6 +11,7 @@ const pool = mysql.createPool({
   // serve para manter a conexão ativa, mesmo que não esteja sendo usada, evitando que a conexão seja fechada
   waitForConnections: true,
   connectionLimit: 10,
+  queueLimit: 0,
 });
 
 module.exports = pool;
