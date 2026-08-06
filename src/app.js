@@ -27,7 +27,8 @@ app.use(helmet());
 // Configuracões de Cors
 const allowedOrigins = [
   "http://localhost:5500",
-  "https://connecthub.vercel.app",
+  process.env.FRONTEND_URL ||
+    "https://connecthub-frontend-production.up.railway.app",
 ];
 
 app.use(
