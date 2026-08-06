@@ -27,12 +27,12 @@ const apiLimiter = require("./middlewares/rateLimitMiddleware").apiLimiter;
 // // Configuracões de Cors
 // const allowedOrigins = [
 //   "http://localhost:5500",
-//   process.env.FRONTEND_URL || "https://connecthub-eight-theta.vercel.app/",
+//   process.env.FRONTEND_URL || "https://connecthub-eight-theta.vercel.app",
 // ];
 
 app.use(
   cors({
-    origin: "https://connecthub-eight-theta.vercel.app/",
+    origin: "https://connecthub-eight-theta.vercel.app",
     // Permite o envio de credenciais (cookies, autenticação, etc.). Só funciona origin definida
     credentials: true,
 
